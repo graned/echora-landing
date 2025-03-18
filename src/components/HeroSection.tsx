@@ -1,12 +1,10 @@
-import { Box, Typography, Container, useTheme } from '@mui/material'
+import { Box, Typography, Container } from '@mui/material'
 import { motion } from 'framer-motion'
 import WaitlistForm from './WaitlistForm'
 
 const heroImage = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
 
 export default function HeroSection() {
-  const theme = useTheme()
-
   return (
     <Box
       sx={{
@@ -14,10 +12,9 @@ export default function HeroSection() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(18, 18, 18, 0.8), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
         position: 'relative',
         overflow: 'hidden',
         '&::before': {
@@ -43,7 +40,7 @@ export default function HeroSection() {
             component="h1" 
             sx={{
               fontWeight: 900,
-              background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.secondary.main} 90%)`,
+              background: `linear-gradient(45deg, #7C4DFF 30%, #00E5FF 90%)`,
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               mb: 3,
@@ -84,21 +81,6 @@ export default function HeroSection() {
           <WaitlistForm />
         </motion.div>
       </Container>
-
-      <motion.div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '100px',
-          background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-          zIndex: 2
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      />
     </Box>
   )
 }
