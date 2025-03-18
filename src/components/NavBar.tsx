@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { AppBar, Toolbar, Typography, Button, Container } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -18,5 +18,5 @@ export default function NavBar() {
         </Toolbar>
       </Container>
     </AppBar>
-  )
+  );
 }

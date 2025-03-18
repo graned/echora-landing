@@ -1,5 +1,5 @@
-import { Container, Box, Typography, Grid } from '@mui/material'
-import TeamMemberCard from '../components/TeamMemberCard'
+import { Container, Box, Typography, Grid } from "@mui/material";
+import TeamMemberCard from "../components/TeamMemberCard";
 
 export default function AboutPage() {
   return (
@@ -12,11 +12,12 @@ export default function AboutPage() {
           Crafting Stories, One Voice at a Time
         </Typography>
         <Typography variant="body1" paragraph>
-          Echora was born from a passion for storytelling and the power of voice. We believe every story
-          deserves to be heard, and every voice deserves to be unique. Our mission is to empower creators
-          to bring their stories to life with customizable audio experiences.
+          Echora was born from a passion for storytelling and the power of
+          voice. We believe every story deserves to be heard, and every voice
+          deserves to be unique. Our mission is to empower creators to bring
+          their stories to life with customizable audio experiences.
         </Typography>
-        
+
         <Typography variant="h4" component="h2" gutterBottom sx={{ mt: 4 }}>
           Meet the Team
         </Typography>
@@ -45,5 +46,5 @@ export default function AboutPage() {
         </Grid>
       </Box>
     </Container>
-  )
+  );
 }
