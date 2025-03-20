@@ -1,17 +1,25 @@
-import { Box } from '@mui/material'
-import HeroSection from '../components/HeroSection'
-import WhatIsEchoraSection from '../components/WhatIsEchoraSection'
-import UpdatesSection from '../components/UpdatesSection'
-import SectionDivider from '../components/SectionDivider'
+import { Container, Box, Typography, Button, Grid } from '@mui/material'
+import WaitlistForm from '../components/WaitlistForm'
+import FeaturesSection from '../components/FeaturesSection'
+import TestimonialsSection from '../components/TestimonialsSection'
+import IncentivesSection from '../components/IncentivesSection'
 
 export default function HomePage() {
   return (
-    <Box>
-      <HeroSection />
-      <SectionDivider />
-      <WhatIsEchoraSection />
-      <SectionDivider />
-      <UpdatesSection />
-    </Box>
+    <Container maxWidth="lg">
+      <Box sx={{ my: 4, textAlign: 'center' }}>
+        <Typography variant="h2" component="h1" gutterBottom>
+          Create Captivating Audiobooks with Echora
+        </Typography>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Bring your stories to life with AI-powered voices, customizable actors, and immersive tones.
+        </Typography>
+        <WaitlistForm />
+      </Box>
+      
+      <IncentivesSection />
+      <FeaturesSection />
+      <TestimonialsSection />
+    </Container>
   )
 }

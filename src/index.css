@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-  color: white;
 }
 
 #root {
@@ -48,22 +47,4 @@ body {
 
 .floating-element {
   animation: float 4s ease-in-out infinite;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1976d2;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #1565c0;
 }
