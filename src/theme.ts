@@ -2,50 +2,55 @@ import { createTheme } from '@mui/material/styles'
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#2E3A59', // Deep Navy Blue
-      light: '#4A5A7A',
-      dark: '#1C2538'
+      main: '#7C4DFF', // Vibrant purple
+      light: '#B388FF',
+      dark: '#651FFF'
     },
     secondary: {
-      main: '#D4A418', // Warm Amber/Gold
-      light: '#FFD54F',
-      dark: '#B28704'
+      main: '#00E5FF', // Bright cyan
+      light: '#6FFFFF',
+      dark: '#00B2CC'
     },
     background: {
-      default: '#F5F5DC', // Cream/Off-White
-      paper: '#FFFFFF'
+      default: '#121212',
+      paper: '#1E1E1E'
     },
     text: {
-      primary: '#2E3A59',
-      secondary: '#6B8E23' // Muted Green
+      primary: '#FFFFFF',
+      secondary: '#B3B3B3'
     },
-    accent: {
-      main: '#CC5500', // Burnt Orange
-      neon: '#00BFFF' // Soft Neon Blue
+    success: {
+      main: '#00C853', // Green
+      light: '#5EFC82',
+      dark: '#009624'
+    },
+    warning: {
+      main: '#FFAB00', // Amber
+      light: '#FFD740',
+      dark: '#C67C00'
+    },
+    error: {
+      main: '#FF5252', // Red
+      light: '#FF867F',
+      dark: '#C50E29'
     }
   },
   typography: {
-    fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
+    fontFamily: 'Poppins, sans-serif',
     h1: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 700,
+      fontWeight: 900,
       fontSize: '4rem',
       lineHeight: 1.1
     },
     h2: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: '3rem'
     },
     h3: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: '2rem'
-    },
-    body1: {
-      fontSize: '1.1rem',
-      lineHeight: 1.6
     }
   },
   shape: {

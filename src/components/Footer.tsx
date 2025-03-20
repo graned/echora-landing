@@ -1,48 +1,80 @@
-import { Box, Typography, Container, Grid, Link } from '@mui/material'
+import { Box, Typography, Link as MuiLink, Container } from '@mui/material'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
   return (
-    <Box
-      component="footer"
-      sx={{
-        py: 4,
-        background: '#2E3A59',
-        color: '#F5F5DC'
-      }}
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Echora
-            </Typography>
-            <Typography variant="body2">
-              Where classic storytelling meets modern AI technology.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Quick Links
-            </Typography>
-            <Link href="#" color="inherit" display="block">About Us</Link>
-            <Link href="#" color="inherit" display="block">Features</Link>
-            <Link href="#" color="inherit" display="block">Contact</Link>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom>
-              Newsletter
-            </Typography>
-            <Typography variant="body2">
-              Subscribe to our newsletter for updates and special offers.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Box sx={{ borderTop: '1px solid #D4A418', mt: 4, pt: 2 }}>
-          <Typography variant="body2" align="center">
+      <Box component="footer" sx={{ 
+        py: 4, 
+        mt: 'auto', 
+        bgcolor: 'background.paper',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+      }}>
+        <Container maxWidth="lg">
+          <Typography variant="body2" color="text.secondary" align="center">
             © {new Date().getFullYear()} Echora. All rights reserved.
           </Typography>
-        </Box>
-      </Container>
-    </Box>
+          <Box sx={{ 
+            mt: 1, 
+            display: 'flex', 
+            justifyContent: 'center', 
+            gap: 2,
+            flexWrap: 'wrap'
+          }}>
+            <MuiLink 
+              component={Link} 
+              to="/about" 
+              color="inherit"
+              sx={{
+                '&:hover': {
+                  color: 'primary.main'
+                }
+              }}
+            >
+              About Us
+            </MuiLink>
+            <MuiLink 
+              href="#" 
+              color="inherit"
+              sx={{
+                '&:hover': {
+                  color: 'primary.main'
+                }
+              }}
+            >
+              Terms of Service
+            </MuiLink>
+            <MuiLink 
+              href="#" 
+              color="inherit"
+              sx={{
+                '&:hover': {
+                  color: 'primary.main'
+                }
+              }}
+            >
+              Privacy Policy
+            </MuiLink>
+            <MuiLink 
+              href="#" 
+              color="inherit"
+              sx={{
+                '&:hover': {
+                  color: 'primary.main'
+                }
+              }}
+            >
+              Contact Us
+            </MuiLink>
+          </Box>
+        </Container>
+      </Box>
+    </motion.footer>
   )
 }

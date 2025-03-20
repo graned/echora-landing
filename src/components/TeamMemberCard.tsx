@@ -10,8 +10,9 @@ export default function TeamMemberCard({ name, role, description, color }) {
       <Card
         sx={{
           height: '100%',
-          bgcolor: 'background.paper',
-          border: `1px solid ${color}`,
+          background: 'rgba(255, 255, 255, 0.05)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
           transition: 'all 0.3s ease',
           '&:hover': {
             boxShadow: `0 8px 32px ${color}40`,
@@ -40,7 +41,7 @@ export default function TeamMemberCard({ name, role, description, color }) {
               </Typography>
             </Box>
           </Box>
-          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+          <Typography variant="body1" sx={{ fontSize: '1rem' }}>
             {description}
           </Typography>
         </CardContent>
