@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import WaitlistForm from './WaitlistForm'
 import { Star, Share } from '@mui/icons-material'
 
-const heroImage = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+// New background image URL
+const heroImage = 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'
 
 export default function HeroSection() {
   const theme = useTheme()
