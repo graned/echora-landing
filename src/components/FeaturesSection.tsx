@@ -1,25 +1,28 @@
-import { Grid, Typography, Box, Paper } from '@mui/material'
-import { Mic, Equalizer, AudioFile, SettingsVoice } from '@mui/icons-material'
+import { Grid, Typography, Box, Paper, Container } from '@mui/material'
+import MicIcon from '@mui/icons-material/Mic'
+import EqualizerIcon from '@mui/icons-material/Equalizer'
+import AudioFileIcon from '@mui/icons-material/AudioFile'
+import SettingsVoiceIcon from '@mui/icons-material/SettingsVoice'
 import { motion } from 'framer-motion'
 
 const features = [
   {
-    icon: <Mic fontSize="large" />,
+    icon: <MicIcon fontSize="large" />,
     title: 'Customizable Actors',
     description: 'Choose from a variety of voices or create your own.'
   },
   {
-    icon: <Equalizer fontSize="large" />,
+    icon: <EqualizerIcon fontSize="large" />,
     title: 'Immersive Tones',
     description: 'Adjust tone and emotion for every line of dialogue.'
   },
   {
-    icon: <AudioFile fontSize="large" />,
+    icon: <AudioFileIcon fontSize="large" />,
     title: 'High-Quality Audio',
     description: 'Export professional-grade audio files.'
   },
   {
-    icon: <SettingsVoice fontSize="large" />,
+    icon: <SettingsVoiceIcon fontSize="large" />,
     title: 'Easy to Use',
     description: 'Intuitive interface for seamless storytelling.'
   }
