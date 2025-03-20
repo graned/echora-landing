@@ -29,7 +29,7 @@ export default function WhatIsEchoraSection() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ py: 8, background: 'radial-gradient(circle, rgba(25,118,210,0.1) 0%, rgba(18,18,18,1) 100%)' }}>
+    <Box sx={{ py: 8, background: 'radial-gradient(circle, rgba(222,136,114,0.1) 0%, rgba(18,18,18,1) 100%)' }}>
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ export default function WhatIsEchoraSection() {
             sx={{ 
               textAlign: 'center',
               mb: 4,
-              background: 'linear-gradient(45deg, #7C4DFF 30%, #00E5FF 90%)',
+              background: 'linear-gradient(45deg, #DE8872 30%, #AED9D6 90%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               fontSize: { xs: '2rem', md: '3rem' }
@@ -106,7 +106,7 @@ export default function WhatIsEchoraSection() {
                         display: 'inline-flex',
                         p: 2,
                         borderRadius: '50%',
-                        background: 'rgba(25, 118, 210, 0.1)'
+                        background: 'rgba(222, 136, 114, 0.1)'
                       }}>
                         {feature.icon}
                       </Box>
