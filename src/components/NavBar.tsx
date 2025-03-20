@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function NavBar() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: 'primary.main' }}>
       <Container maxWidth="lg">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

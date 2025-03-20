@@ -31,7 +31,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <Box sx={{ py: 8, background: '#F5F5DC' }}>
+    <Box sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -60,7 +60,7 @@ export default function FeaturesSection() {
                     p: 4,
                     height: '100%',
                     borderRadius: '16px',
-                    background: '#FFFFFF',
+                    bgcolor: 'background.paper',
                     border: `2px solid ${feature.color}`,
                     transition: 'all 0.3s ease',
                     '&:hover': {
