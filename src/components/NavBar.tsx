@@ -1,5 +1,6 @@
-import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material'
+import { AppBar, Toolbar, Button, Container } from '@mui/material'
 import { Link } from 'react-router-dom'
+import EchoraLogo from './EchoraLogo'
 
 export default function NavBar() {
   return (
@@ -13,19 +14,9 @@ export default function NavBar() {
     >
       <Container maxWidth="lg">
         <Toolbar>
-          <Typography 
-            variant="h6" 
-            component="div" 
-            sx={{ 
-              flexGrow: 1,
-              fontWeight: 700,
-              background: 'linear-gradient(45deg, #DE8872 30%, #AED9D6 90%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}
-          >
-            Echora
-          </Typography>
+          <Box sx={{ flexGrow: 1 }}>
+            <EchoraLogo />
+          </Box>
           <Button
             component={Link}
             to="/"
