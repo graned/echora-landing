@@ -38,8 +38,8 @@ export default function WaitlistForm() {
         size="large"
         sx={{ 
           mt: 2,
-          background: 'linear-gradient(45deg, #1976d2 30%, #9c27b0 90%)',
-          color: 'white',
+          background: 'linear-gradient(45deg, #DE8872 30%, #AED9D6 90%)',
+          color: '#000',
           fontWeight: 'bold',
           fontSize: '1.1rem',
           px: 4,
@@ -47,7 +47,7 @@ export default function WaitlistForm() {
           '&:hover': {
             transform: 'scale(1.05)',
             transition: 'transform 0.3s ease',
-            boxShadow: '0 4px 20px rgba(25, 118, 210, 0.4)'
+            boxShadow: '0 4px 20px rgba(222, 136, 114, 0.4)'
           }
         }}
         onClick={handleOpen}
@@ -105,7 +105,8 @@ export default function WaitlistForm() {
                   mt: 2,
                   py: 1.5,
                   fontSize: '1rem',
-                  background: 'linear-gradient(45deg, #1976d2 30%, #9c27b0 90%)'
+                  background: 'linear-gradient(45deg, #DE8872 30%, #AED9D6 90%)',
+                  color: '#000'
                 }}
               >
                 Submit

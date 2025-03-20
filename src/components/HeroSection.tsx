@@ -53,7 +53,7 @@ export default function HeroSection() {
             gutterBottom
             sx={{
               fontWeight: 900,
-              background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.secondary.main} 90%)`,
+              background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.accent.main} 90%)`,
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               mb: 3,
@@ -76,7 +76,7 @@ export default function HeroSection() {
             component="h2" 
             gutterBottom
             sx={{ 
-              color: 'rgba(255,255,255,0.9)',
+              color: theme.palette.neutral.light,
               maxWidth: '800px',
               mb: 4,
               fontSize: { xs: '1.2rem', md: '1.5rem' },

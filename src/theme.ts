@@ -4,37 +4,32 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#7C4DFF', // Vibrant purple
-      light: '#B388FF',
-      dark: '#651FFF'
+      main: '#DE8872', // Warm coral tone
+      light: '#E8A898',
+      dark: '#C96E5A'
     },
     secondary: {
-      main: '#00E5FF', // Bright cyan
-      light: '#6FFFFF',
-      dark: '#00B2CC'
+      main: '#A7D0CD', // Soft teal
+      light: '#C1E0DE',
+      dark: '#8DBAB7'
     },
     background: {
-      default: '#121212',
-      paper: '#1E1E1E'
+      default: '#000000', // Black
+      paper: '#121212'
     },
     text: {
       primary: '#FFFFFF',
-      secondary: '#B3B3B3'
+      secondary: '#E0E0E0'
     },
-    success: {
-      main: '#00C853', // Green
-      light: '#5EFC82',
-      dark: '#009624'
+    accent: {
+      main: '#AED9D6', // Light aqua
+      light: '#C6E5E3',
+      dark: '#96C4C1'
     },
-    warning: {
-      main: '#FFAB00', // Amber
-      light: '#FFD740',
-      dark: '#C67C00'
-    },
-    error: {
-      main: '#FF5252', // Red
-      light: '#FF867F',
-      dark: '#C50E29'
+    neutral: {
+      main: '#AAD4D1', // Muted turquoise
+      light: '#C2E0DE',
+      dark: '#92BAB7'
     }
   },
   typography: {
@@ -55,6 +50,16 @@ const theme = createTheme({
   },
   shape: {
     borderRadius: 12
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontWeight: 600
+        }
+      }
+    }
   }
 })
 
