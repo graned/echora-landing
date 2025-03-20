@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Button, Container } from '@mui/material'
+import { AppBar, Toolbar, Button, Container, Box } from '@mui/material'
 import { Link } from 'react-router-dom'
 import EchoraLogo from './EchoraLogo'
 
@@ -14,7 +14,7 @@ export default function NavBar() {
     >
       <Container maxWidth="lg">
         <Toolbar>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', height: '64px' }}>
             <EchoraLogo />
           </Box>
           <Button
