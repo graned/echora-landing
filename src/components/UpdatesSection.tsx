@@ -28,7 +28,7 @@ const updates = [
 
 export default function UpdatesSection() {
   return (
-    <Box sx={{ py: 8, background: 'rgba(255, 255, 255, 0.03)' }}>
+    <Box sx={{ py: 8, background: 'radial-gradient(circle, rgba(167,208,205,0.1) 0%, rgba(18,18,18,1) 100%)' }}>
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -42,7 +42,7 @@ export default function UpdatesSection() {
             sx={{ 
               textAlign: 'center',
               mb: 4,
-              background: 'linear-gradient(45deg, #7C4DFF 30%, #00E5FF 90%)',
+              background: 'linear-gradient(45deg, #DE8872 30%, #AED9D6 90%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               fontSize: { xs: '2rem', md: '3rem' }
@@ -56,7 +56,8 @@ export default function UpdatesSection() {
               p: 2,
               background: 'rgba(255, 255, 255, 0.05)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '16px'
             }}
           >
             <List sx={{ width: '100%' }}>
@@ -71,11 +72,11 @@ export default function UpdatesSection() {
                     sx={{
                       mb: 2,
                       background: 'rgba(255, 255, 255, 0.03)',
-                      borderRadius: '8px',
+                      borderRadius: '12px',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateX(10px)',
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+                        boxShadow: '0 4px 20px rgba(222, 136, 114, 0.2)'
                       }
                     }}
                   >
