@@ -28,7 +28,7 @@ const updates = [
 
 export default function UpdatesSection() {
   return (
-    <Box sx={{ py: 8, background: 'radial-gradient(circle, rgba(167,208,205,0.1) 0%, rgba(18,18,18,1) 100%)' }}>
+    <Box sx={{ py: 8, background: 'radial-gradient(circle, rgba(222,136,114,0.1) 0%, rgba(18,18,18,1) 100%)' }}>
       <Container maxWidth="lg">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
