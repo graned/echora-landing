@@ -1,6 +1,8 @@
 import { Box, Typography, Container, Button } from '@mui/material'
 import { motion } from 'framer-motion'
 
+const heroImage = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+
 export default function HeroSection() {
   return (
     <Box
@@ -10,8 +12,8 @@ export default function HeroSection() {
         alignItems: 'center',
         justifyContent: 'center',
         background: `
-          linear-gradient(rgba(245, 245, 220, 0.9), 
-          url('/vintage-microphone.jpg')`,
+          linear-gradient(rgba(245, 245, 220, 0.8), 
+          url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative',
@@ -27,10 +29,20 @@ export default function HeroSection() {
             radial-gradient(circle, transparent 20%, #2E3A59 70%),
             linear-gradient(to bottom, rgba(212, 164, 24, 0.1), rgba(204, 85, 0, 0.1))`,
           zIndex: 1
+        },
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '100px',
+          background: 'linear-gradient(to top, rgba(245, 245, 220, 1) 0%, rgba(245, 245, 220, 0) 100%)',
+          zIndex: 2
         }
       }}
     >
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3, textAlign: 'center' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,7 +55,8 @@ export default function HeroSection() {
             sx={{
               color: 'primary.main',
               mb: 3,
-              textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+              textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+              fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' }
             }}
           >
             Where Classic Storytelling Meets Modern AI
@@ -56,7 +69,8 @@ export default function HeroSection() {
               color: 'text.secondary',
               maxWidth: '800px',
               mb: 4,
-              mx: 'auto'
+              mx: 'auto',
+              fontSize: { xs: '1.2rem', md: '1.5rem' }
             }}
           >
             Experience the magic of storytelling with our AI-powered audiobook platform
