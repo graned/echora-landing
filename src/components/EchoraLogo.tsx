@@ -1,60 +1,43 @@
-import { Box } from '@mui/material'
+import { Box } from "@mui/material";
 
 export default function EchoraLogo() {
   return (
     <Box
       component="svg"
       xmlns="http://www.w3.org/2000/svg"
-      width="90"  // Reduced from 120
-      height="30" // Reduced from 40
-      viewBox="0 0 120 40"
+      width="160px" // Adjusted for header size
+      height="70px" // Adjusted for header size
+      viewBox="0 0 160 70" // Adjusted viewBox
       sx={{
-        '& path': {
-          transition: 'fill 0.3s ease'
+        "& path": {
+          transition: "fill 0.3s ease",
         },
-        '&:hover path': {
-          fill: 'url(#logoGradient)'
-        }
+        "&:hover path": {
+          fill: "url(#logoGradient)",
+        },
       }}
     >
+      <rect width="160" height="70" fill="url(#pattern0_1_10)" />
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: '#DE8872', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#AED9D6', stopOpacity: 1 }} />
-        </linearGradient>
+        <pattern
+          id="pattern0_1_10"
+          patternContentUnits="objectBoundingBox"
+          width="1"
+          height="1"
+        >
+          <use
+            xlinkHref="#image0_1_10"
+            transform="matrix(0.00234277 0 0 0.0055597 -0.45283 -1.06343)"
+          />
+        </pattern>
+        <image
+          id="image0_1_10"
+          width="800"
+          height="600"
+          preserveAspectRatio="none"
+          xlinkHref="data:image/png;base64,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"
+        />
       </defs>
-      <path
-        d="M10 20C10 14.477 14.477 10 20 10H100C105.523 10 110 14.477 110 20V30C110 35.523 105.523 40 100 40H20C14.477 40 10 35.523 10 30V20Z"
-        fill="#DE8872"
-      />
-      <path
-        d="M25 15L35 25L25 35"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M45 15L55 25L45 35"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M65 15L75 25L65 35"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M85 15L95 25L85 35"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
     </Box>
-  )
+  );
 }

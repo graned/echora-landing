@@ -1,49 +1,41 @@
-import { AppBar, Toolbar, Button, Container, Box } from '@mui/material'
-import { Link } from 'react-router-dom'
-import EchoraLogo from './EchoraLogo'
+import { AppBar, Toolbar, Container, Box } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import EchoraLogo from "./EchoraLogo";
+import WaitlistForm from "./WaitlistForm";
 
 export default function NavBar() {
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate("/");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <AppBar 
+    <AppBar
       position="sticky"
-      sx={{ 
-        background: 'rgba(0, 0, 0, 0.8)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(222, 136, 114, 0.1)'
+      sx={{
+        background: "rgba(0, 0, 0, 0.8)",
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid rgba(222, 136, 114, 0.1)",
       }}
     >
       <Container maxWidth="lg">
         <Toolbar>
-          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', height: '64px' }}>
+          <Box component={Link} onClick={handleHomeClick} sx={{ flexGrow: 1 }}>
             <EchoraLogo />
           </Box>
-          <Button
-            component={Link}
-            to="/"
-            color="inherit"
+          <Box
             sx={{
-              mr: 2,
-              '&:hover': {
-                color: 'primary.main'
-              }
+              marginBottom: "0.5rem",
             }}
           >
-            Home
-          </Button>
-          <Button
-            component={Link}
-            to="/about"
-            color="inherit"
-            sx={{
-              '&:hover': {
-                color: 'primary.main'
-              }
-            }}
-          >
-            About
-          </Button>
+            <WaitlistForm />
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
-  )
+  );
 }

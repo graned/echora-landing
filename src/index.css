@@ -18,36 +18,19 @@ body {
   flex-direction: column;
 }
 
-/* Custom Animations */
-@keyframes fadeInUp {
+/* Glow Animation */
+@keyframes soft-glow {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    text-shadow: 
+      0 0 1px #DE8872,
+      0 0 3px #DE8872,
+
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    text-shadow: 
+      0 0 3px #DE8872,
+      0 0 6px #DE8872,
   }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.animated-section {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.floating-element {
-  animation: float 4s ease-in-out infinite;
 }
 
 /* Scrollbar Styling */
@@ -60,10 +43,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1976d2;
+  background: #DE8872;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1565c0;
+  background: #C96E5A;
 }
